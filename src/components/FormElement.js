@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./FormElement.css";
 
-export default function FormElement() {
-  const [inputValue, setInputValue] = useState("");
-  function handleSubmit(event) {
-    event.preventDefault();
-    const currentToDos = JSON.parse(localStorage.getItem("todo")) || [];
-    localStorage.setItem("todo", JSON.stringify([...currentToDos, inputValue]));
-    setInputValue("");
-  }
+export default function FormElement({
+  handleSubmit,
+  inputValue,
+  setInputValue,
+}) {
   return (
     <form onSubmit={(event) => handleSubmit(event)}>
       <input
