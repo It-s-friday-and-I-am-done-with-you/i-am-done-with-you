@@ -40,8 +40,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:once",
-      "pre-push": "npm run test:once"
+      "pre-commit": "",
+      "pre-push": ""
     }
   }
 }
