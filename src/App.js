@@ -1,10 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
+import FormElement from "./components/FormElement";
 
 function App() {
   return (
     // Some awesomeness here
-    <div>Hallo</div>
+    <main>
+      <p>Hallo</p>
+      <FormElement />
+    </main>
   );
 }
 
