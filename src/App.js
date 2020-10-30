@@ -1,5 +1,6 @@
 import "./App.css";
 import FormElement from "./components/FormElement";
+import List from "./components/List";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
     <main>
       <p>Hallo</p>
       <FormElement />
+      <List />
     </main>
   );
 }
