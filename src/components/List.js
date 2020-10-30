@@ -1,5 +1,5 @@
 import ListElement from "./ListElement";
-
+// Is { currentToDos = [] } a dirty fix for error cannot map undefined???
 export default function List({ currentToDos = [] }) {
   return (
     <ul data-testid="list">
