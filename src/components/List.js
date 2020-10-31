@@ -1,12 +1,11 @@
 import ListElement from "./ListElement";
-
-export default function List() {
-  //   const items = ["blaa", "blupp", "blii"];
-  //   const listItems = items.map((item) => <li key={item.toString()}>{item}</li>);
-
+// Is { currentToDos = [] } a dirty fix for error cannot map undefined???
+export default function List({ currentToDos = [] }) {
   return (
     <ul data-testid="list">
-      <ListElement />
+      {currentToDos.map((todo) => (
+        <ListElement key={todo} todo={todo} />
+      ))}
     </ul>
   );
 }
