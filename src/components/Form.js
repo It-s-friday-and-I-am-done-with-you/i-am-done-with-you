@@ -2,9 +2,12 @@ import React from "react";
 import "./Form.css";
 
 const Form = () => {
+  const inputTextHandler = (event) => {
+    console.log(event.target.value);
+  };
   return (
-    <form className="input-form">
-      <input type="text" className="input-text" />
+    <form className="input-form" autoComplete="off">
+      <input onChange={inputTextHandler} type="text" className="input-text" />
       <button className="button-add" type="submit">
         Add
       </button>
