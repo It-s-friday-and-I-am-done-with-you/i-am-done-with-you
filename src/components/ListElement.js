@@ -1,10 +1,14 @@
-import DeleteButton from "./DeleteButton";
+export default function ListElement({ todo, currentToDos, setCurrentToDos }) {
+  function handleDelete() {
+    const filteredArray = currentToDos.filter((item) => item !== todo);
+    localStorage.setItem("todo", JSON.stringify(filteredArray));
+    setCurrentToDos(filteredArray);
+  }
 
-export default function ListElement({ todo }) {
   return (
-    <div>
+    <div id="123">
       <li data-testid="listElement">{todo}</li>
-      <DeleteButton />
+      <button onClick={() => handleDelete()}>delete</button>
     </div>
   );
 }
