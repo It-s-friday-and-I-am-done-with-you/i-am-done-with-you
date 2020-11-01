@@ -8,7 +8,7 @@ export default function ListElement({ todo, currentToDos, setCurrentToDos }) {
   return (
     <div id="123">
       <li data-testid="listElement">{todo}</li>
-      <button onClick={() => handleDelete()}>delete</button>
+      <button onClick={() => handleDelete()}>🗑</button>
     </div>
   );
 }
