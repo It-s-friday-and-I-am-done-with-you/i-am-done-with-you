@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 
-const Form = ({ inputText, setInputText, todos, setTodos }) => {
+const Form = ({ inputText, setInputText, setStatus, todos, setTodos }) => {
   const inputTextHandler = (event) => {
     setInputText(event.target.value);
   };
@@ -13,6 +13,10 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
       { text: inputText, completed: false, id: Math.random() * 1000 },
     ]);
     setInputText("");
+  };
+
+  const statusHandler = (event) => {
+    setStatus(event.target.value);
   };
 
   return (
@@ -31,7 +35,7 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
         Add
       </button>
       <div className="selection">
-        <select name="todos" className="filter">
+        <select onChange={statusHandler} name="todos" className="filter">
           <option value="all">All</option>
           <option value="done">Done</option>
           <option value="todo">ToDo</option>
