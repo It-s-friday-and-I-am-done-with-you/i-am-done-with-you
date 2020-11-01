@@ -19,7 +19,7 @@ function App() {
   return (
     // Some awesomeness here
     <main>
-      <p>Hallo</p>
+      <h1>To Dos</h1>
       <FormElement
         inputValue={inputValue}
         handleSubmit={handleSubmit}
