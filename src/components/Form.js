@@ -1,9 +1,9 @@
 import React from "react";
 import "./Form.css";
 
-const Form = () => {
+const Form = ({ setInputText }) => {
   const inputTextHandler = (event) => {
-    console.log(event.target.value);
+    setInputText(event.target.value);
   };
   return (
     <form className="input-form" autoComplete="off">
