@@ -23,7 +23,11 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
         type="text"
         className="input-text"
       />
-      <button onClick={submitInputHandler} className="button-add" type="submit">
+      <button
+        onClick={submitInputHandler}
+        className="btn btnn-add"
+        type="submit"
+      >
         Add
       </button>
       <div className="selection">
