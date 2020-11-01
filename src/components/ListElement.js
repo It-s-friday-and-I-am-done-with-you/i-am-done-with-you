@@ -1,10 +1,14 @@
-import EditButton from "./EditButton";
+export default function ListElement({ todo, currentToDos, setCurrentToDos }) {
+  function handleDelete() {
+    const filteredArray = currentToDos.filter((item) => item !== todo);
+    localStorage.setItem("todo", JSON.stringify(filteredArray));
+    setCurrentToDos(filteredArray);
+  }
 
-export default function ListElement({ todo }) {
   return (
-    <li data-testid="listElement">
-      {todo}
-      <EditButton />
-    </li>
+    <div id="123">
+      <li data-testid="listElement">{todo}</li>
+      <button onClick={() => handleDelete()}>delete</button>
+    </div>
   );
 }
