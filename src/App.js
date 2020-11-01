@@ -25,7 +25,7 @@ function App() {
         handleSubmit={handleSubmit}
         setInputValue={setInputValue}
       />
-      <List currentToDos={currentToDos} />
+      <List currentToDos={currentToDos} setCurrentToDos={setCurrentToDos} />
     </main>
   );
 }
